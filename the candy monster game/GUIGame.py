@@ -1,5 +1,5 @@
 from tkinter import *
-import random
+import randomc
 
 window = Tk()
 window.title('The Candy Monster Game')
@@ -73,7 +73,7 @@ def collision(item1, item2, distance):
 def check_hits():
     for candy in bad_candy_list:
         if collision(mychar, candy, 30):
-            game_over = canvas.create_text(200, 200, text= '             Game Over\nPlease view your score/level', fill='red', font = ('Helvetica', 30))
+            game_over = canvas.create_text(200, 200, text= 'Game Over', fill='red', font = ('Helvetica', 30))
             window.after(2000, end_game_over)
             return
     for candy in candy_list:
